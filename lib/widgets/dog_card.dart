@@ -22,7 +22,7 @@ class DogCard extends StatelessWidget {
                   
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: [
-                      BoxShadow(color: primary, blurRadius: 0.5)
+                      BoxShadow(color: Color(0xFFD6BCD6), blurRadius: 0.5)
                     ]),
                   child: Align(
                     alignment: Alignment.centerRight,
