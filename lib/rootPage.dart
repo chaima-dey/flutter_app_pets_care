@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:flutterapppetscare/pages/Reglage/settings_screen.dart';
 import 'package:flutterapppetscare/pages/home_pets.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
 
 
-import 'Reglage/settings_screen.dart';
 
 class RootPage extends StatefulWidget {
   @override
