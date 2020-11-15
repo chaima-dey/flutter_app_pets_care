@@ -14,11 +14,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
 
-      SettingsList(
+
+      body: SettingsList(
+
         backgroundColor: Color(0xFFFEFDFE),
+
         sections: [
+
+
           SettingsSection(
             title: 'Mes Postes/Favoris',
             // titleTextStyle: TextStyle(fontSize: 30),

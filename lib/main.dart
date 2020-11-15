@@ -1,8 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutterapppetscare/pages/home_pets.dart';
-import 'package:flutterapppetscare/pages/search_page.dart';
 import 'package:flutterapppetscare/pages/splash_page.dart';
 import 'package:flutterapppetscare/rootPage.dart';
 import 'package:flutterapppetscare/theme/constant.dart';

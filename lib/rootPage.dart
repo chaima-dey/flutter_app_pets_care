@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:flutterapppetscare/pages/Annonces/annonces.dart';
 import 'package:flutterapppetscare/pages/Reglage/settings_screen.dart';
-import 'package:flutterapppetscare/pages/home_pets.dart';
+import 'package:flutterapppetscare/pages/adoption/adoptionHome.dart';
+import 'package:flutterapppetscare/pages/myPets/container_transition.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
+
 
 
 
@@ -15,6 +18,7 @@ class _RootPageState extends State<RootPage> {
   BorderRadius _borderRadius = const BorderRadius.only(
     topLeft: Radius.circular(25),
     topRight: Radius.circular(25),
+
   );
 
   ShapeBorder bottomBarShape = RoundedRectangleBorder(
@@ -35,11 +39,9 @@ class _RootPageState extends State<RootPage> {
 
   Color unselectedColor = Color.fromRGBO(124,62,134, 0.8);
   List <Widget> pages = [
-    Center(child: Text("Mes Animaux",style: TextStyle(fontSize: 40),),),
-    Homepage(),
-    Center(child: Text("Annonces",style: TextStyle(fontSize: 40),),),
-    Center(child: Text("Annonces",style: TextStyle(fontSize: 40),),),
-
+    OpenContainerTransformDemo(),
+adoptionHome(),
+    annonces(),
     SettingsScreen()
   ];
 
@@ -54,6 +56,8 @@ class _RootPageState extends State<RootPage> {
         snakeShape: snakeShape,
         shape:  BeveledRectangleBorder(borderRadius: _borderRadius),
         padding: padding,
+        elevation: 8,
+        shadowColor: Colors.grey,
 
         ///configuration for SnakeNavigationBar.color
         snakeViewColor: selectedColor,
@@ -76,7 +80,7 @@ class _RootPageState extends State<RootPage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.pets), label: 'Pets'),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Adoption'),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Annonces'),
+          BottomNavigationBarItem(icon: Icon(Icons.announcement), label: 'Annonces'),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings')
         ],
 

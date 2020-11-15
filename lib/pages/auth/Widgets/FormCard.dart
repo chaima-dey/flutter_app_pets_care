@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutterapppetscare/pages/home_pets.dart';
 import 'package:flutterapppetscare/rootPage.dart';
 
 
