@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapppetscare/pages/adoption/adoptionDetails.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
 import 'package:flutterapppetscare/widgets/dog_card.dart';
 import 'package:flutterapppetscare/widgets/walk_card_dog.dart';
@@ -68,8 +69,7 @@ class _adoptionHomeState extends State<adoptionHome> {
 
         transitionType: _transitionType,
         openBuilder: (BuildContext context, VoidCallback _) {
-          return const _DetailsPage(
-            includeMarkAsDoneButton: false,
+          return  adoptionDetailsPage(
           );
         },
         closedElevation: 6.0,

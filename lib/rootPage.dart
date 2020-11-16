@@ -35,9 +35,9 @@ class _RootPageState extends State<RootPage> {
   bool showSelectedLabels = true;
   bool showUnselectedLabels = true;
 
-  Color selectedColor = Color(0xFFBA68C8);
+  Color selectedColor =  Color.fromRGBO(124,62,134, 0.8);
 
-  Color unselectedColor = Color.fromRGBO(124,62,134, 0.8);
+  Color unselectedColor = primary;
   List <Widget> pages = [
     OpenContainerTransformDemo(),
 adoptionHome(),
@@ -62,7 +62,7 @@ adoptionHome(),
         ///configuration for SnakeNavigationBar.color
         snakeViewColor: selectedColor,
         selectedItemColor: snakeShape == SnakeShape.indicator ? selectedColor : null,
-        unselectedItemColor: Color.fromRGBO(124,62,134, 0.8),
+        unselectedItemColor:primary,
 
         ///configuration for SnakeNavigationBar.gradient
         // snakeViewGradient: selectedGradient,

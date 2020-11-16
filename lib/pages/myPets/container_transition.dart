@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutterapppetscare/pages/myPets/details.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
 
 import 'animations.dart';
@@ -130,7 +131,7 @@ class _OpenContainerWrapper extends StatelessWidget {
     return OpenContainer<bool>(
       transitionType: transitionType,
       openBuilder: (BuildContext context, VoidCallback _) {
-        return const _DetailsPage();
+        return MyPetsDetailsPage();
       },
       onClosed: onClosed,
       tappable: false,
