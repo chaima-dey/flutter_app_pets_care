@@ -18,9 +18,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Pet App UI',
       theme: ThemeData(
+
+          // brightness: Brightness.dark,
+          inputDecorationTheme: const InputDecorationTheme(
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: colortheme)
+            ),
+            // labelStyle: TextStyle(color: Colors.purple),
+            border: OutlineInputBorder(gapPadding: 10),
+
+          ),
           textTheme: GoogleFonts.latoTextTheme(
             Theme.of(context).textTheme
+
           ),
+
           scaffoldBackgroundColor: appBackground),
       home: SplashScreen(),
     );

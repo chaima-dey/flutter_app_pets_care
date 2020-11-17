@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutterapppetscare/pages/myPets/addPet.dart';
 import 'package:flutterapppetscare/pages/myPets/details.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
 
@@ -87,9 +88,7 @@ class _OpenContainerTransformDemoState
 
         transitionType: _transitionType,
         openBuilder: (BuildContext context, VoidCallback _) {
-          return const _DetailsPage(
-            includeMarkAsDoneButton: false,
-          );
+          return addPetPage();
         },
         closedElevation: 6.0,
         closedShape: const RoundedRectangleBorder(
@@ -218,63 +217,3 @@ class _InkWellOverlay extends StatelessWidget {
   }
 }
 
-class _DetailsPage extends StatelessWidget {
-  const _DetailsPage({this.includeMarkAsDoneButton = true});
-
-  final bool includeMarkAsDoneButton;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Details page'),
-        actions: <Widget>[
-          if (includeMarkAsDoneButton)
-            IconButton(
-              icon: const Icon(Icons.done),
-              onPressed: () => Navigator.pop(context, true),
-              tooltip: 'Mark as done',
-            )
-        ],
-      ),
-      body: ListView(
-        children: <Widget>[
-          Container(
-            color: Colors.black38,
-            height: 250,
-            child: Padding(
-              padding: const EdgeInsets.all(70.0),
-              child: Image.asset(
-                'assets/placeholder_image.png',
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  'Title',
-                  style: Theme.of(context).textTheme.headline5.copyWith(
-                        color: Colors.black54,
-                        fontSize: 30.0,
-                      ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  _loremIpsumParagraph,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
-                        color: Colors.black54,
-                        height: 1.5,
-                        fontSize: 16.0,
-                      ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

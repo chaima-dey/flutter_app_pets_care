@@ -5,6 +5,8 @@ const primary = Color(0xFFBA68C8);
 const white = Color(0xFFFFFFFF);
 const textWhite = Color(0xFFFFFFFF);
 const textBlack = Color(0xFF000000);
+const colortheme = Color(0xFFBC90BC);
+
 
 // card color 
 const card1 = Color(0xFF15464E);
