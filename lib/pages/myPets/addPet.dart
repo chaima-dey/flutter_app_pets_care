@@ -35,6 +35,15 @@ class _addpetState extends State<addPetPage> {
               fontSize: 16.0,
               fontWeight: FontWeight.normal
           ),),
+          actions: <Widget>[
+        IconButton(
+        icon: Icon(
+          Icons.refresh,
+          color: Colors.white,
+
+        ),
+      onPressed: () {},
+    ),]
     ),
         body: Padding(
           padding: const EdgeInsets.all(12),
@@ -84,6 +93,20 @@ class _addpetState extends State<addPetPage> {
                     ),
                     SizedBox(height: 15),
 
+                    FormBuilderTextField(
+
+                      decoration: const InputDecoration(
+                        focusColor: colortheme,
+                        labelText: 'Color',
+
+                        labelStyle: TextStyle(color: colortheme),
+
+                      ),
+                      attribute: 'color',
+                      onChanged: _onChanged,
+
+                    ),
+                    SizedBox(height: 15),
 
                     FormBuilderDateTimePicker(
                       attribute: 'date Birth',
@@ -146,6 +169,21 @@ class _addpetState extends State<addPetPage> {
                     ),
 
                     SizedBox(height: 15),
+                    FormBuilderTextField(
+                      keyboardType: TextInputType.multiline,
+
+                      decoration: const InputDecoration(
+                        focusColor: colortheme,
+                        labelText: 'Description',
+
+                        labelStyle: TextStyle(color: colortheme),
+
+                      ),
+                      attribute: 'Description',
+                      onChanged: _onChanged,
+
+                    ),
+                    SizedBox(height: 15),
 
                   ],
                 ),
@@ -154,9 +192,9 @@ class _addpetState extends State<addPetPage> {
                 children: <Widget>[
                   Expanded(
                     child: MaterialButton(
-                      color: Theme.of(context).accentColor,
+                      color: Color.fromRGBO(124,62,134, 0.8),
                       child:
-                      Text('Submit', style: TextStyle(color: Colors.white)),
+                      Text('Save', style: TextStyle(color: Colors.white)),
                       onPressed: () {
                         if (_fbKey.currentState.saveAndValidate()) {
                           print(_fbKey.currentState.value);
@@ -168,15 +206,15 @@ class _addpetState extends State<addPetPage> {
                     ),
                   ),
                   SizedBox(width: 20),
-                  Expanded(
-                    child: MaterialButton(
-                      color: Theme.of(context).accentColor,
-                      child: Text('Reset', style: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        _fbKey.currentState.reset();
-                      },
-                    ),
-                  ),
+                //  Expanded(
+                  //  child: MaterialButton(
+                    //  color: Theme.of(context).accentColor,
+                      //child: Text('Reset', style: TextStyle(color: Colors.white)),
+                      //onPressed: () {
+                        //_fbKey.currentState.reset();
+                      //},
+                    //),
+                  //),
                 ],
               ),
             ],

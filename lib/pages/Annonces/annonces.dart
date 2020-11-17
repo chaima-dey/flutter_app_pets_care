@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapppetscare/pages/Annonces/addAnnonce.dart';
 import 'package:flutterapppetscare/pages/myPets/src/open_container.dart';
 import 'package:flutterapppetscare/theme/constant.dart';
 import 'package:tiled_tab_indicator/tiled_tab_indicator.dart';
@@ -55,9 +56,7 @@ class _AnnoncesState extends State<annonces> {
 
           transitionType: _transitionType,
           openBuilder: (BuildContext context, VoidCallback _) {
-            return const _DetailsPage(
-              includeMarkAsDoneButton: false,
-            );
+            return  addAnnoncePage();
           },
           closedElevation: 6.0,
           closedShape: const RoundedRectangleBorder(
